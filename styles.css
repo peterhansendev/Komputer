@@ -1,0 +1,219 @@
+
+html, body {
+    height:100%;
+}
+
+html {
+    display:table; 
+    width:100%;
+}
+body {
+    display:table-cell; 
+    vertical-align:middle;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #b0c4de;
+}
+
+#top {
+    display: flex;
+    justify-content: space-around; 
+}
+
+#bank,
+#work,
+#laptops,
+#info {
+    min-width: 200px;
+    height: 230px;
+    width: 15%;
+    background-color: ghostwhite;
+    border-radius: 5%;
+    border-style: groove;
+    padding: 15px;
+  
+}
+
+button {
+    border-radius: 5px;
+    border-width: 0px;
+    border-color: black;
+    border-width: 1px;
+    box-shadow: 0px 0px 1px black;
+    width: 70%;
+    height: 30px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+/* Bank */
+
+#bank-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bank button {
+    background-color: springgreen;
+}
+
+#bank button:disabled {
+    color: black;
+    cursor: not-allowed;
+}
+
+#money-div {
+    display: flex;
+    gap: 5px;
+}
+
+/* Work */
+
+#work-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#work-btns {
+    display: flex;
+    gap: 20px;
+}
+
+#payment-div {
+    display: flex;
+    gap: 5px;
+}
+
+#payment-btn {
+    background-color: yellow;
+}
+
+#work-btn {
+    background-color: blue;
+    color: white;
+}
+
+
+/* Laptops */
+
+#laptops h2 {
+    margin-bottom: 17px;
+}
+
+/* Info */
+
+#info {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 82%;
+    min-width: 700px;
+    border-radius: 10px;
+}
+
+img {
+    height: 100%;
+    width: 20%;
+    margin: 30px;
+    object-fit: contain;
+}
+
+#buy-div-top {
+    margin-left: 7%;
+    max-width: 40%;
+}
+
+#buy-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: -30px;
+}
+
+#info-btn {
+    margin: 0;
+    width: 200px;
+    background-color: lightskyblue;
+}
+
+#info-price {
+    font-size: 2em;
+}
+
+@media only screen and (max-width: 1800px) {
+    body {
+        margin: 100px;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    #info {
+        width: 85%;
+    }
+
+    #buy-div-top {
+        margin-left: 4%;
+    }
+
+    #buy-div {
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    body {
+        margin: 50px;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    #top {
+        justify-content: space-between;
+    }
+
+    #info {
+        margin-left: 10px;
+        width: 94%;
+    }
+
+    #buy-div-top {
+        margin-left: 1%;
+    }
+
+    #buy-div {
+       margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #top {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #info {
+        flex-direction: column;
+        min-width: 0;
+        height: auto;
+        width: 60%;
+        margin: auto;
+        margin-top: 11px;
+    }
+
+    img {
+        width: 70%;
+    }
+
+}
