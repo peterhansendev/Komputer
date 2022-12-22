@@ -2,12 +2,8 @@
 
 ## Description
 
-Noroff assigment Komputer
+BROKEN
 
-## Installation
-```
-git@gitlab.com:PeterHansen123/javascriptassignments.git
-```
 ## Credits
 
 Peter Hansen
