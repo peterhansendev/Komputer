@@ -1,7 +1,9 @@
 //Bank
 const displayedAmount = document.getElementById("money");
+const totalDebt = document.getElementById("totalDebt");
 const bankBtn = document.getElementById("button");
 displayedAmount.innerText = 200;
+totalDebt.innerText = 0;
 let newAccount = 200;
 let borrowedMoney = 0;
 
@@ -21,7 +23,7 @@ function loan() {
     newAccount = newAccount += parseInt(amount);
     displayedAmount.innerHTML = newAccount;
     borrowedMoney = parseInt(amount);
-    bankBtn.innerText = "Outstanding loan: " + borrowedMoney + " Kr.";
+    totalDebt.innerText = borrowedMoney;
     bankBtn.disabled = true;
   }
 }
@@ -42,7 +44,7 @@ function payBack() {
     newAccount = newAccount + salary;
     displayedAmount.innerHTML = newAccount;
     salary = 0;
-    bankBtn.innerText = "Get a loan";
+    totalDebt.innerText = "0";
     bankBtn.disabled = false;
   }
   if (salary >= borrowedMoney) {
@@ -50,14 +52,14 @@ function payBack() {
     displayedAmount.innerHTML = newAccount;
     payment.innerHTML = salary;
     borrowedMoney = 0;
-    bankBtn.innerText = "Get a loan";
+    totalDebt.innerText = "0";
     bankBtn.disabled = false;
   } else if (salary < borrowedMoney) {
     displayedAmount.innerHTML = newAccount;
     borrowedMoney = borrowedMoney - salary;
     salary = 0;
     payment.innerHTML = salary;
-    bankBtn.innerText = "Outstanding loan: " + borrowedMoney + " Kr.";
+    totalDebt.innerText = borrowedMoney;
   }
   if (salary == 0) {
     document.getElementById("payment-btn").disabled = true;

@@ -1,219 +1,238 @@
-
-html, body {
-    height:100%;
-}
-
-html {
-    display:table; 
-    width:100%;
-}
+html,
 body {
-    display:table-cell; 
-    vertical-align:middle;
-    padding-left: 150px;
-    padding-right: 150px;
-    background-color: #b0c4de;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-#top {
-    display: flex;
-    justify-content: space-around; 
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+#profile {
+  height: calc(100% - 20px);
+  width: 50%;
+  background-color: #4286fb;
+  min-height: 600px;
+  min-width: 500px;
+  padding: 10px;
+}
+
+#profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+#profile-img {
+  height: 200px;
+  width: 200px;
+  border: 8px double white;
+  border-radius: 50%;
+}
+
+form {
+  display: flex;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 10px;
+  height: 10%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+input {
+  border: none;
+  background: transparent;
+  text-align: center;
+  width: 40%;
+}
+
+#not-profile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  height: 50%;
 }
 
 #bank,
-#work,
-#laptops,
-#info {
-    min-width: 200px;
-    height: 230px;
-    width: 15%;
-    background-color: ghostwhite;
-    border-radius: 5%;
-    border-style: groove;
-    padding: 15px;
-  
+#work {
+  min-width: 200px;
+  height: 90%;
+  width: 40%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  background-size: 100% 50%;
+  background-position: top;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 5px;
+}
+
+#bank {
+  background-image: url("https://cdn.pixabay.com/photo/2015/07/19/13/33/credit-card-851506_960_720.jpg");
+}
+
+#work {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/22/21/26/notebook-1850613_960_720.jpg");
 }
 
 button {
-    border-radius: 5px;
-    border-width: 0px;
-    border-color: black;
-    border-width: 1px;
-    box-shadow: 0px 0px 1px black;
-    width: 70%;
-    height: 30px;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    cursor: pointer;
+  border-radius: 3px;
+  border-width: 0px;
+  border-color: black;
+  border-width: 1px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 70%;
+  height: 30px;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid white;
+  border-radius: 10px;
+  opacity: 90%;
+  height: 15%;
+ 
+}
+
+button:hover {
+  opacity: 100%;
 }
 
 /* Bank */
 
-#bank-div {
-    display: flex;
-    justify-content: space-between;
+#bank-div,
+#debt {
+  display: flex;
+  justify-content: space-between;
 }
 
 #bank button {
-    background-color: springgreen;
+  background-color: #0c06f7;
+  width: 50%;
+  color: white;
+  position: relative;
+  top: 25%;
+  transform: translate(0%, -50%);
+  min-width: 150px;
+}
+
+#bank button:hover {
+  background-color: #318ce7;
+  opacity: 100%;
+}
+
+#bottom {
+  position: relative;
+  top: 58%;
+  transform: translate(0%, -50%);
 }
 
 #bank button:disabled {
-    color: black;
-    cursor: not-allowed;
+  color: black;
+  cursor: not-allowed;
 }
 
 #money-div {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 /* Work */
 
 #work-div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #work-btns {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: 25%;
+  transform: translate(0%, -50%);
+  height: 15%;
 }
 
 #payment-div {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 #payment-btn {
-    background-color: yellow;
+  background-color: yellow;
+  height: 100%;
+  border-color: black;
+}
+
+#payment-btn:disabled {
+  cursor: not-allowed;
 }
 
 #work-btn {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
+  height: 100%;
 }
-
 
 /* Laptops */
 
 #laptops h2 {
-    margin-bottom: 17px;
+  margin-bottom: 17px;
 }
 
-/* Info */
+/* Store */
 
-#info {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-top: 50px;
-    width: 82%;
-    min-width: 700px;
-    border-radius: 10px;
+#store {
+  height: 100%;
+  width: 50vw;
+  background-color: black;
+  color: orange
 }
 
 img {
-    height: 100%;
-    width: 20%;
-    margin: 30px;
-    object-fit: contain;
+  width: 20%;
+  margin: 30px;
+  object-fit: contain;
 }
 
 #buy-div-top {
-    margin-left: 7%;
-    max-width: 40%;
+  margin-left: 7%;
+  max-width: 40%;
 }
 
 #buy-div {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    align-items: center;
-    margin-right: 30px;
-    margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: -30px;
 }
 
 #info-btn {
-    margin: 0;
-    width: 200px;
-    background-color: lightskyblue;
+  margin: 0;
+  width: 200px;
+  background-color: lightskyblue;
 }
 
 #info-price {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 @media only screen and (max-width: 1800px) {
-    body {
-        margin: 100px;
-    }
-
-    img {
-        width: 30%;
-    }
-
-    #info {
-        width: 85%;
-    }
-
-    #buy-div-top {
-        margin-left: 4%;
-    }
-
-    #buy-div {
-        margin-left: 50px;
-    }
 }
 
 @media only screen and (max-width: 1400px) {
-    body {
-        margin: 50px;
-    }
-
-    img {
-        width: 30%;
-    }
-
-    #top {
-        justify-content: space-between;
-    }
-
-    #info {
-        margin-left: 10px;
-        width: 94%;
-    }
-
-    #buy-div-top {
-        margin-left: 1%;
-    }
-
-    #buy-div {
-       margin-left: 100px;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
-    #top {
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #info {
-        flex-direction: column;
-        min-width: 0;
-        height: auto;
-        width: 60%;
-        margin: auto;
-        margin-top: 11px;
-    }
-
-    img {
-        width: 70%;
-    }
-
 }
