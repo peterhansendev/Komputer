@@ -16,7 +16,7 @@ const client = new Client({
 app.use(express.static("public"));
 app.use(express.json());
 
-app.listen(3304, () => {
+app.listen('https://komputer.vercel.app/', () => {
   console.log("Sever is now listening at port 3300");
 });
 
