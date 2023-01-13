@@ -141,7 +141,7 @@ fetch('https://komputer.vercel.app/computerinfo')
 
 //Backend communication
 
-const baseUrl = "https://komputer.vercel.app";
+const baseUrl = "http://komputer.vercel.app";
 let input = "okk"
 
 async function getInfo() {
