@@ -25,10 +25,11 @@ app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || "kompute
 client.connect();
 
 app.get("/computerinfo", (req, res) => {
+  res.status(200).json({info: "1234"})
   /* const { dynamic } = req.params
   const { key } = req.query
-  console.log(dynamic, key); */
-  res.status(200).json({info: "1234"})
+  console.log(dynamic, key); 
+ 
   res.status(200).send('<h1>ok</h1>')
    client.query(`Select * from computers`, (err, result) => {
     if (!err) {
@@ -36,7 +37,7 @@ app.get("/computerinfo", (req, res) => {
       
     }
   });
-  client.end; 
+  client.end; */
 });
 /*
 client.query(`Select * from computers`, (err, result) => {
