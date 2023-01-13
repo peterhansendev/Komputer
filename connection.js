@@ -18,7 +18,7 @@ const client = new Client({
 app.use(express.static("public"));
 app.use(express.json());
 
-app.listen(process.env.PORT || 3304, () => {
+app.listen(process.env.PORT || 3304, '0.0.0.0', () => {
   console.log("Sever is now listening at port 3300");
 });
 
