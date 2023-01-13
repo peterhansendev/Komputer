@@ -32,7 +32,7 @@ app.get("/computerinfo", (req, res) => {
    client.query(`Select * from computers`, (err, result) => {
     if (!err) {
       res.send(result.rows);
-      //res.status(200).json({info: "1234"})
+      res.status(200).json({info: "1234"})
     }
   });
   client.end; 
