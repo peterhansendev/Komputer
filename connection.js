@@ -18,7 +18,7 @@ const client = new Client({
 app.use(express.static("public"));
 app.use(express.json());
 
-app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app', '0.0.0.0', () => {
+app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || komputer.vercel.app, '0.0.0.0', () => {
   console.log("Sever is now listening at port 3300");
 });
 
@@ -28,7 +28,7 @@ app.get("/computerinfo", (req, res) => {
   /* const { dynamic } = req.params
   const { key } = req.query
   console.log(dynamic, key); */
-  //res.status(200).json({info: "1234"})
+  res.status(200).json({info: "1234"})
   res.status(200).send('<h1>ok</h1>')
    client.query(`Select * from computers`, (err, result) => {
     if (!err) {
