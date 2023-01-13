@@ -6,6 +6,7 @@ import express from "express";
 const app = express();
 import dotenv from 'dotenv'
 dotenv.config()
+import { v4 } from 'uuid';
 
 const client = new Client({
   host: "localhost",
@@ -24,7 +25,15 @@ app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || "kompute
 
 client.connect();
 
+app.get('/api', (req, res) => {
+  const path = `/api/item/${v4()}`;
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+  res.end(`Hello! Go to item: <a href="${path}">${path}</a>`);
+});
+
 app.get("/computerinfo", (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
   res.status(200).json({info: "1234"})
   /* const { dynamic } = req.params
   const { key } = req.query
