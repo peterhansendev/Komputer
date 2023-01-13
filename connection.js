@@ -4,19 +4,21 @@ import pkg from "pg";
 const { Client } = pkg;
 import express from "express";
 const app = express();
+import dotenv from 'dotenv'
+dotenv.config()
 
 const client = new Client({
   host: "localhost",
   user: "postgres",
   port: 5432,
   database: "",
-  password: "postgres",
+  password: process.env.POSTGRES_KEY,
 });
 
 app.use(express.static("public"));
 app.use(express.json());
 
-app.listen(80, () => {
+app.listen(3304, () => {
   console.log("Sever is now listening at port 3300");
 });
 
