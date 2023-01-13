@@ -132,10 +132,11 @@ function buyButton() {
     window.alert("You can't afford this computer");
   }
 }
-
+/*
 fetch('https://komputer.vercel.app/computerinfo')
   .then((response) => response.json())
   .then((data) => console.log(data));
+  */
 
 
 //Backend communication
