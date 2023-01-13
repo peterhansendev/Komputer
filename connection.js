@@ -28,7 +28,7 @@ app.get("/computerinfo", (req, res) => {
   /* const { dynamic } = req.params
   const { key } = req.query
   console.log(dynamic, key); */
- 
+  res.status(200).json({info: "1234"})
    client.query(`Select * from computers`, (err, result) => {
     if (!err) {
       res.send(result.rows);
