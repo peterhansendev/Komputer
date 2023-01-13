@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My first page" />
+    <meta name="viewport" content="width=device-width, ititial-scale=1" />
+    <title>My site</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+
+<body>
+    <div id="profile">
+        <section id="profile-info">
+            <img id="profile-img"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />
+            <form>
+                <input placeholder="Bob" type="text" id="fname" name="fname" />
+                <input placeholder="Burg" type="text" id="fname" name="fname" />
+                <input placeholder="88888888" type="text" id="fname" name="fname" />
+                <input placeholder="bob.burg@mail.com" type="text" id="fname" name="fname" />
+            </form>
+        </section>
+        <div id="not-profile">
+
+            <section id="bank">
+                <button id="button" onclick="getInfo()">Get a loan</button>
+                <div id="bottom">
+                    <h2>Bank</h2>
+                    <div id="bank-div">
+                        <p>Balance</p>
+                        <div id="money-div">
+                            <p id="money"></p>
+                            <p>Kr.</p>
+                        </div>
+                    </div>
+
+                    <div id="debt">
+                        <p>Outstanding Debt</p>
+                        <div id="money-div">
+                            <p id="totalDebt"></p>
+                            <p>Kr.</p>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="work">
+                <div id="work-btns">
+                    <button id="payment-btn" onclick="payBack()" disabled>Bank</button>
+                    <button id="work-btn" onclick="work()">Work</button>
+                </div>
+
+                <div id="bottom">
+                    <h2>Work</h2>
+                    <div id="work-div">
+                        <p>Salary</p>
+                        <div id="payment-div">
+                            <p id="payment"></p>
+                            <p>Kr.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="store">
+        <section id="laptops">
+            <h2>Store</h2>
+            <br />
+            <select id="laptops-dropdown"></select>
+            <p id="info-specs"></p>
+        </section>
+
+        <img id="info-img"
+            onerror="src='https://cdn.pixabay.com/photo/2020/04/02/06/54/coming-soon-4993716_960_720.png';" />
+        <div id="buy-div-top">
+            <h2 id="info-h1">Hello</h2>
+            <p id="info-description">Welcome to our store!</p>
+            <p id="info-stock"></p>
+        </div>
+        <div id="buy-div">
+            <p id="info-price">Price</p>
+            <button id="info-btn" onclick="buyButton()">BUY NOW</button>
+        </div>
+    </section>
+    <script src="./Komputer.js"> 
+    </script>
+</body>
+
+</html>
