@@ -25,7 +25,7 @@ app.get("/computerinfo", (req, res) => {
   client.end; */
 });
 
-app.listen(5000, () => {
+app.listen(3304, () => {
   console.log("Running on port 5000.");
 });
 
