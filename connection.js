@@ -26,7 +26,7 @@ app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || "kompute
 });
 
 client.connect();
-
+/*
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader('Content-Type', 'text/html');
