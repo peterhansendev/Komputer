@@ -133,7 +133,7 @@ function buyButton() {
   }
 }
 
-fetch('https://komputer.vercel.app/computerinfo')
+fetch('https://komputer.vercel.app/api/item/computerinfo')
   .then((response) => response.json())
   .then((data) => console.log(data));
   
