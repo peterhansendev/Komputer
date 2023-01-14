@@ -1,27 +1,10 @@
 import express from "express";
-import dotenv from 'dotenv'
-dotenv.config()
 
 const app = express();
 
 app.get("/api", (req, res) => {
   res.send("Express on Vercel");
 });
-
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
-
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  database: "",
-  password: process.env.POSTGRES_KEY,
-});
-
-client.connect();
-
 
 app.get("/computerinfo", (req, res) => {
   res.setHeader('Content-Type', 'text/html');
@@ -39,6 +22,12 @@ app.get("/computerinfo", (req, res) => {
   });
   client.end; */
 });
+
+app.listen(5000, () => {
+  console.log("Running on port 5000.");
+});
+
+
 
 // Export the Express API
 export default app;
