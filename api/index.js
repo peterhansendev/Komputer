@@ -1,11 +1,12 @@
 import express from "express";
+import { json } from "node:stream/consumers";
 
 const app = express();
 
 app.get('/api/item/:slug', (req, res) => {
-  res.send(" params Vercel api!" + req.params);
+  res.send(" params Vercel api!" + req.params + JSON.stringify(req.params));
   const { slug } = req.params;
-console.log(res);
+console.log(JSON.stringify(req.params));
   
 });
 
