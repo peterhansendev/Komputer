@@ -64,3 +64,4 @@ app.post("/", (req, res) => {
   res.status(200).send({ status: "received" });
 });
 
+module.exports = app;
