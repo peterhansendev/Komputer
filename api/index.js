@@ -5,7 +5,7 @@ const app = express();
 app.get('/api/item/:slug', (req, res) => {
   res.send(" params Vercel api!");
   const { slug } = req.params;
-  res.end(`Item: ${slug}`);
+ console.log(slug);
   
 });
 
