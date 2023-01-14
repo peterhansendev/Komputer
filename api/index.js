@@ -1,19 +1,35 @@
 import express from "express";
 
 const app = express();
-const PORT = 4000
 
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
+app.get("/api", (req, res) => {
+  res.send("Express on Vercel api!");
+});
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+app.get("/apii", (req, res) => {
+  res.send("Express on Vercel");
+});
 
-app.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
-})
+app.get("/api/computerinfo", (req, res) => {
+ res.send("computerinfo on Vercel");
+  /* const { dynamic } = req.params
+  const { key } = req.query
+  console.log(dynamic, key); 
+ 
+  res.status(200).send('<h1>ok</h1>')
+   client.query(`Select * from computers`, (err, result) => {
+    if (!err) {
+      res.send(result.rows);
+      
+    }
+  });
+  client.end; */
+});
+
+app.listen(3304, () => {
+  console.log("Running on port 5000.");
+});
+
 
 
 // Export the Express API

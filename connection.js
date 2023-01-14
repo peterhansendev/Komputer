@@ -1,7 +1,7 @@
 
 
 //PostgreSQL
-/*
+
 import pkg from "pg";
 const { Client } = pkg;
 import express from "express";
@@ -27,7 +27,7 @@ app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || "kompute
 
 client.connect();
 
-app.get('/api', (req, res) => {
+app.get('/api1', (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader('Content-Type', 'text/html');
   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
@@ -37,7 +37,7 @@ app.get('/api', (req, res) => {
 app.get("/computerinfo", (req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.status(200).json({info: "1234"})
-  /* const { dynamic } = req.params
+   const { dynamic } = req.params
   const { key } = req.query
   console.log(dynamic, key); 
  
@@ -66,4 +66,4 @@ app.post("/", (req, res) => {
 });
 
 
-//module.exports = app; */
+module.exports = app; 
