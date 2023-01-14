@@ -10,7 +10,7 @@ app.get("/apii", (req, res) => {
   res.send("Express on Vercel");
 });
 
-app.get("/computerinfo", (req, res) => {
+app.get("/api/computerinfo", (req, res) => {
  res.send("computerinfo on Vercel");
   /* const { dynamic } = req.params
   const { key } = req.query
