@@ -1,14 +1,14 @@
 import express from "express";
-const app = express();
-import { v4 } from 'uuid';
 
-app.get('/api', (req, res) => {
+const app = express();
+
+app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
 
-app.get('/api/item/:slug', (req, res) => {
-  const { slug } = req.params;
-  res.end(`Item: ${slug}`);
+app.listen(5000, () => {
+  console.log("Running on port 5000.");
 });
 
-module.exports = app;
+// Export the Express API
+export default app;
