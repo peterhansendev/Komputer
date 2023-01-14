@@ -22,7 +22,8 @@ app.get("/api/item/:slug", (req, res) => {
         res.send(result.rows);
         
       }
-    });
+    })
+    client.end; ;
   } else {
     res.send(
       " params Vercel api!" + slug
