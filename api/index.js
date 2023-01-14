@@ -2,18 +2,12 @@ import express from "express";
 
 const app = express();
 
-
-app.get("/", (req, res) => {
-  res.send(" on Vercel api!");
-});
-
 app.get('/api/item/:slug', (req, res) => {
   res.send(" params Vercel api!");
   const { slug } = req.params;
   res.end(`Item: ${slug}`);
   
 });
-
 
 app.get("/api", (req, res) => {
   res.send("Express on Vercel api!");
