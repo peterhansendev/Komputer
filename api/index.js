@@ -1,31 +1,13 @@
 import express from "express";
-import pkg from "pg";
-const { Client } = pkg;
-import dotenv from 'dotenv'
-dotenv.config()
+
 
 const app = express();
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  database: "",
-  password: process.env.POSTGRES_KEY,
-});
-
-client.connect();
 
 app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params
 
   if(slug == "computerinfo") {
-    client.query(`Select * from computers`, (err, result) => {
-      if (!err) {
-        res.send(result.rows);
-        
-      }
-    })
-    client.end; ;
+    res.send(JSON.parse('{"name":"John", "age":30, "city":"New York"}'));
   } else {
     res.send(
       " params Vercel api!" + slug
