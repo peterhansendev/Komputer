@@ -1,6 +1,8 @@
 import express from "express";
 import pkg from "pg";
 const { Client } = pkg;
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express();
 const client = new Client({
