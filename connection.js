@@ -3,6 +3,7 @@ const app = express();
 import { v4 } from 'uuid';
 
 app.get('/api', (req, res) => {
+  res.status(200).json({info: "1234"})
   const path = `/api/item/${v4()}`;
   res.setHeader('Content-Type', 'text/html');
   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
