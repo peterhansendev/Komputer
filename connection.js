@@ -48,7 +48,7 @@ app.get("/computerinfo", (req, res) => {
       
     }
   });
-  client.end; */
+  client.end; 
 });
 /*
 client.query(`Select * from computers`, (err, result) => {
