@@ -4,8 +4,9 @@ import { json } from "node:stream/consumers";
 const app = express();
 
 app.get("/api/item/:slug", (req, res) => {
-  const { slug } = req.params;
-  if(slug == computerinfo) {
+  const { slug } = req.params
+
+  if(slug == "computerinfo") {
     res.send("computerinfo on Vercel");
   } else {
     res.send(
