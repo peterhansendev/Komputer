@@ -1,7 +1,7 @@
 
 
 //PostgreSQL
-
+/*
 import pkg from "pg";
 const { Client } = pkg;
 import express from "express";
@@ -26,7 +26,7 @@ app.listen(process.env.PORT || 3304 || 'https://komputer.vercel.app' || "kompute
 });
 
 client.connect();
-/*
+
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader('Content-Type', 'text/html');
@@ -50,12 +50,11 @@ app.get("/computerinfo", (req, res) => {
   });
   client.end; 
 });
-/*
 client.query(`Select * from computers`, (err, result) => {
   if (!err) {
     console.log(JSON.stringify(result.rows));
   }
-}); */
+}); 
 
 app.post("/", (req, res) => {
   const { parcel } = req.body;
@@ -66,4 +65,5 @@ app.post("/", (req, res) => {
   res.status(200).send({ status: "received" });
 });
 
-module.exports = app;
+
+//module.exports = app; */
