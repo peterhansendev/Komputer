@@ -1,13 +1,28 @@
 import express from "express";
-import { json } from "node:stream/consumers";
+import pkg from "pg";
+const { Client } = pkg;
 
 const app = express();
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  database: "",
+  password: process.env.POSTGRES_KEY,
+});
+
+client.connect();
 
 app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params
 
   if(slug == "computerinfo") {
-    res.send(JSON.parse('{"name":"John", "age":30, "city":"New York"}'));
+    client.query(`Select * from computers`, (err, result) => {
+      if (!err) {
+        res.send(result.rows);
+        
+      }
+    });
   } else {
     res.send(
       " params Vercel api!" + slug
