@@ -1,5 +1,5 @@
 //PostgreSQL
-/*
+
 import pkg from "pg";
 const { Client } = pkg;
 import express from "express";
@@ -46,14 +46,14 @@ app.get("/computerinfo", (req, res) => {
       
     }
   });
-  client.end;
+  client.end; */
 });
 /*
 client.query(`Select * from computers`, (err, result) => {
   if (!err) {
     console.log(JSON.stringify(result.rows));
   }
-}); 
+}); */
 
 app.post("/", (req, res) => {
   const { parcel } = req.body;
@@ -63,5 +63,4 @@ app.post("/", (req, res) => {
   }
   res.status(200).send({ status: "received" });
 });
- 
-*/
+
