@@ -5,6 +5,9 @@ const app = express();
 app.get("/api", (req, res) => {
   res.send("Express on Vercel");
 });
+app.get("/apii", (req, res) => {
+  res.send("Express on Vercel");
+});
 
 app.get("/computerinfo", (req, res) => {
  res.send("computerinfo on Vercel");
