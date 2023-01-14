@@ -7,7 +7,12 @@ app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params
 
   if(slug == "computerinfo") {
-    res.send(JSON.parse('{"name":"John", "age":30, "city":"New York"}'));
+    res.send(client.query(`Select * from computers`, (err, result) => {
+      if (!err) {
+        res.send(result.rows);
+        
+      }
+    }));
   } else {
     res.send(
       " params Vercel api!" + slug
