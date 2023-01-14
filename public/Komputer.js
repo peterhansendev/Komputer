@@ -145,6 +145,9 @@ const baseUrl = "https://komputer.vercel.app";
 let input = "okk"
 
 async function getInfo() {
+  fetch('https://komputer.vercel.app/api/item/computerinfo')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
   if (input == "") {
     return;
   }
