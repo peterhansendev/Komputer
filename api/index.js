@@ -7,8 +7,7 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/computerinfo", (req, res) => {
-  res.setHeader('Content-Type', 'text/html');
-  res.status(200).json({info: "1234"})
+ res.send("computerinfo on Vercel");
   /* const { dynamic } = req.params
   const { key } = req.query
   console.log(dynamic, key); 
