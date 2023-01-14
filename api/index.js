@@ -19,4 +19,3 @@ module.exports = app;
 
 
 // Export the Express API
-export default app;
