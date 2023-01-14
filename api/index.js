@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-app.get("/api", (req, res) => {
+app.get("/apia", (req, res) => {
   res.send("Express on Vercel api");
 });
 
