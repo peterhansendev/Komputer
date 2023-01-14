@@ -5,9 +5,14 @@ const app = express();
 
 app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params;
-  res.send(
-    " params Vercel api!" + req.params + JSON.stringify(req.params) + slug
-  );
+  if(slug == computerinfo) {
+    res.send("computerinfo on Vercel");
+  } else {
+    res.send(
+      " params Vercel api!" + slug
+    );
+  }
+ 
   
 });
 
