@@ -3,7 +3,7 @@ import express from "express";
 const app = express();
 
 app.get('/api/item/:slug', (req, res) => {
-  res.send(" params Vercel api!");
+  res.send(" params Vercel api!" + slug);
   const { slug } = req.params;
 console.log(slug);
   
