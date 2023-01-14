@@ -5,7 +5,7 @@ const app = express();
 app.get('/api/item/:slug', (req, res) => {
   res.send(" params Vercel api!");
   const { slug } = req.params;
- console.log(slug);
+console.log(slug);
   
 });
 
@@ -13,9 +13,6 @@ app.get("/api", (req, res) => {
   res.send("Express on Vercel api!");
 });
 
-app.get("/apii", (req, res) => {
-  res.send("Express on Vercel");
-});
 
 app.get("/api/item/computerinfo", (req, res) => {
  res.send("computerinfo on Vercel");
