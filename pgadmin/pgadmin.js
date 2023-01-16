@@ -13,7 +13,7 @@ const client = new Client({
 
 client.connect();
 
-const pgdata = ["ok"];
+const pgdata = [];
 
 client.query(`Select * from computers`, (err, result) => {
   if (!err) {

@@ -38,10 +38,16 @@ function work() {
   salary = parseInt(salary + 100);
   payment.innerHTML = salary;
   document.getElementById("payment-btn").disabled = false;
-
- /* fetch('http://localhost:3304/computerinfo')
+/*
+  fetch('https://customer.elephantsql.com/api/instances', {
+    method: "GET",
+    headers: {
+      "X-API-KEY": "8ca2d5d5-11f6-4f0d-aa77-f33a3adf2fcf",
+      "Content-Type": "application/json"
+    }
+  } )
   .then((response) => response.json())
-  .then((data) => console.log(data)); */
+  .then((data) => console.log(data));  */
 }
 
 function payBack() {
