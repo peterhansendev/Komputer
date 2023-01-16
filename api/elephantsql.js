@@ -6,7 +6,7 @@ dotenv.config({ path: "../.env" });
 
 const elephantsqlData = []
 
-var conString = `postgres://lxozqbnl:${process.env.ELEPHANT_KEY}.db.elephantsql.com/lxozqbnl` //Can be found in the Details page
+var conString = `postgres://lxozqbnl:${process.env.ELEPHANT_KEY}@salt.db.elephantsql.com/lxozqbnl` //Can be found in the Details page
 var client = new Client(conString);
 client.connect(function(err) {
   if(err) {
