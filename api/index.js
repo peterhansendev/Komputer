@@ -1,7 +1,23 @@
 import express from "express";
-
-
 const app = express();
+import pkg from "pg";
+const { Client } = pkg;
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
+
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  database: "",
+  password: process.env.POSTGRES_KEY,
+});
+
+client.connect();
+
+app.listen( 3305, () => {
+  console.log("Sever is now listening at port 3300");
+});
 
 app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params
@@ -18,12 +34,22 @@ app.get("/api/item/:slug", (req, res) => {
 });
 
 app.get("/api", (req, res) => {
-  res.send("Express on Vercel api!");
+  const { dynamic } = req.params;
+  const { key } = req.query;
+  console.log(dynamic, key);
+
+  client.query(`Select * from computers`, (err, result) => {
+    if (!err) {
+      res.send(result.rows);
+    }
+  });
+  client.end;
 });
 
+/*
 app.get("/api/item/computerinfo", (req, res) => {
   res.send("computerinfo on Vercel");
-  /* const { dynamic } = req.params
+   const { dynamic } = req.params
   const { key } = req.query
   console.log(dynamic, key); 
  
@@ -34,12 +60,10 @@ app.get("/api/item/computerinfo", (req, res) => {
       
     }
   });
-  client.end; */
+  client.end; 
 });
+*/
 
-app.listen(3304, () => {
-  console.log("Running on port 5000.");
-});
 
 // Export the Express API
 export default app;
