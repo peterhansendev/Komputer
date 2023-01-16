@@ -12,7 +12,7 @@ client.connect(function(err) {
   if(err) {
     return console.error('could not connect to postgres', err);
   }
-  client.query('SELECT * FROM Companies', function(err, result) {
+  client.query('SELECT * FROM komputers', function(err, result) {
     if(err) {
       return console.error('error running query', err);
     }
