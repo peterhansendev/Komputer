@@ -2,7 +2,6 @@ import pgdata from "../pgadmin/pgadmin.js";
 import express from "express";
 const app = express(); 
 
-console.log(pgdata);
 
 
 app.listen(3305, () => {
@@ -13,7 +12,9 @@ app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params;
 
   if (slug == "computerinfo") {
-    res.send(JSON.parse('{"name":"John", "age":30, "city":"New York"}'));
+    res.send(pgdata || "missing data" );
+
+
   } else {
     res.send(" params Vercel api!" + slug);
   }
