@@ -1,8 +1,6 @@
-import pgdata from "../pgadmin/pgadmin.js";
+
 import express from "express";
 const app = express(); 
-
-console.log(pgdata);
 
 
 app.listen(3305, () => {
