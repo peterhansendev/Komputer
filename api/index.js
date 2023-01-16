@@ -1,7 +1,7 @@
 import pgdata from "../pgadmin/pgadmin.js";
 import express from "express";
 const app = express(); 
-
+import elephantsqlData from "./elephantsql.js";
 
 
 app.listen(3305, () => {
@@ -12,7 +12,7 @@ app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params;
 
   if (slug == "computerinfo") {
-    res.send(pgdata || "missing data" );
+    res.send(elephantsqlData || "missing data" );
 
 
   } else {
