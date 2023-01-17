@@ -1,3 +1,4 @@
+/*
 import pkg from "pg";
 const { Client } = pkg;
 import dotenv from "dotenv";
@@ -24,3 +25,4 @@ client.query(`Select * from computers`, (err, result) => {
 client.end;
 
 export default pgdata;
+*/
