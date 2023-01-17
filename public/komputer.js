@@ -81,7 +81,6 @@ let laptops = [];
 fetch("https://komputer.vercel.app/api/item/computerinfo")
   .then((response) => response.json())
   .then((data) => (laptops = data))
-  console.log(response.json())
   .then((laptops) => addToLaptopsMenu(laptops));
 
 const addToLaptopsMenu = (laptops) => {
