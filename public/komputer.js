@@ -131,7 +131,7 @@ function buyButton() {
     newAccount = newAccount - laptopPrice;
     displayedAmount.innerHTML = newAccount;
   } else {
-    window.alert("You can't afford this computer");
+    window.alert("Insufficient funds");
   }
 }
 
