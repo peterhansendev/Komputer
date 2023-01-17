@@ -242,9 +242,8 @@ button:hover {
 }
 
 #laptops-dropdown option {
-  
+  border-radius: 50px !important;
   background-color: white;
- 
 }
 
 img {
@@ -295,6 +294,7 @@ img {
   #store,
   #profile {
     width: 100vw;
+    height: 100vh;
   }
 }
 
