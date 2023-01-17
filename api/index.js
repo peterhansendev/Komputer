@@ -12,7 +12,7 @@ app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params;
 
   if (slug == "computerinfo") {
-    res.send(elephantsqlData[0][0] || "Data missing" );
+    res.send(elephantsqlData[0] || "Data missing" );
 
 
   } else {
