@@ -65,24 +65,30 @@
     </div>
 
     <section id="store">
+        <h2>Welcome to Computer Inc.</h2>
+        <h4>Computers for cool nerds</h4>
         <section id="laptops">
-            <h2>Store!</h2>
-            <br />
+           
             <select id="laptops-dropdown"></select>
             <p id="info-specs"></p>
-        </section>
 
         <img id="info-img"
-            onerror="src='https://cdn.pixabay.com/photo/2020/04/02/06/54/coming-soon-4993716_960_720.png';" />
+        onerror="src='https://cdn.pixabay.com/photo/2020/04/02/06/54/coming-soon-4993716_960_720.png';" />
+        </section>
+
         <div id="buy-div-top">
-            <h2 id="info-h1">Hello</h2>
-            <p id="info-description">Welcome to our store</p>
-            <p id="info-stock"></p>
+            <div class="computerinfo">
+                <h2 id="info-h1"></h2>
+                <p id="info-description"></p>
+                <p id="info-stock"></p>
+            </div>
+         
+            <div id="buy-div">
+                <p id="info-price">Price</p>
+                <button id="info-btn" onclick="buyButton()">BUY NOW</button>
+            </div>
         </div>
-        <div id="buy-div">
-            <p id="info-price">Price</p>
-            <button id="info-btn" onclick="buyButton()">BUY NOW</button>
-        </div>
+      
     </section>
     <script src="./komputer.js"> 
     </script>

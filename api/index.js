@@ -8,9 +8,9 @@ app.listen(3305, () => {
 
 app.get("/api/item/:slug", (req, res) => {
   const { slug } = req.params;
-  res.setHeader('Access-Control-Allow-Origin', '*')
+
   if (slug == "computerinfo") {
-    
+    res.setHeader('Access-Control-Allow-Origin', '*')
     res.send(elephantsqlData[0] || "Data missing");
   } else {
     res.send(" params Vercel api!" + slug);
