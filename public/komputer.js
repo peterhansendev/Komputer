@@ -15,9 +15,9 @@ function loan() {
   );
 
   if (/[a-zA-Z]/g.test(amount)) {
-    window.alert("Numbers only!!");
+    window.alert("Please type a number");
   } else if (amount > newAccount) {
-    window.alert("You can't borrow more than 2X");
+    window.alert("You are not permitted to borrow more than twice the amount of your balance");
   } else if (amount == "") {
     window.alert("Please type an amount");
   } else {

@@ -16,7 +16,7 @@ body {
   height: 100%;
   min-height: 650px;
   min-width: 500px;
- 
+
   width: 50vw;
 }
 
@@ -202,24 +202,57 @@ button:hover {
   justify-content: center;
 }
 
-/* Laptops */
-
-#laptops {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #store h4 {
   margin-top: -17px;
   font-style: italic;
 }
 
+/* Laptops */
+
+#laptops {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+#laptops-dropdown {
+  margin-bottom: -40px;
+  background-color: lightskyblue;
+  color: black;
+  padding: 5px;
+ text-align: center;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 5px;
+  width: 100%;  
+  border-right: 100px solid transparent;
+  padding-left:88px;
+}
+
+#laptops-dropdown:hover {
+  cursor: pointer;
+  background-color: rgb(107, 167, 246);
+}
+
+#laptops-dropdown option {
+  
+  background-color: white;
+ 
+}
+
 img {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 200px;
   margin: 30px;
-  object-fit: cover;
+  object-fit: contain;
+  margin: 20px;
 }
 
 #buy-div-top {
@@ -260,10 +293,9 @@ img {
   }
 
   #store,
-#profile {
-
-  width: 100vw;
-}
+  #profile {
+    width: 100vw;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
