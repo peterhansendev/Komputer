@@ -3,9 +3,9 @@
 const displayedAmount = document.getElementById("money");
 const totalDebt = document.getElementById("totalDebt");
 const bankBtn = document.getElementById("button");
-displayedAmount.innerText = 200;
+displayedAmount.innerText = 400;
 totalDebt.innerText = 0;
-let newAccount = 200;
+let newAccount = 400;
 let borrowedMoney = 0;
 
 function loan() {
