@@ -86,12 +86,12 @@ fetch("https://komputer.vercel.app/api/item/computerinfo")
 const addToLaptopsMenu = (laptops) => {
   laptops.forEach((x) => addToLaptopMenu(x));
   // Default values
-  infoH1.innerText = laptops[0].name;
-  infoDescription.innerText = laptops[0].description;
-  infoPrice.innerText = "Price " + laptops[0].price;
-  infoStock.innerText = "Stock: " + laptops[0].stock;
-  infoImg.src = laptops[0].image;
-  laptopPrice = laptops[0].price;
+  infoH1.innerText = laptops[1].name;
+  infoDescription.innerText = laptops[1].description;
+  infoPrice.innerText = "Price " + laptops[1].price;
+  infoStock.innerText = "Stock: " + laptops[1].stock;
+  infoImg.src = laptops[1].image;
+  laptopPrice = laptops[1].price;
   //infoSpec.innerText = laptops[0].specs.join("\n ");
 };
 const addToLaptopMenu = (laptop) => {
