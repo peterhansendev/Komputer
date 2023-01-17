@@ -4,7 +4,7 @@ const { Client } = pkg;
 import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
 
-const elephantsqlData = []
+let elephantsqlData 
 
 var conString = `postgres://lxozqbnl:${process.env.ELEPHANT_KEY}@salt.db.elephantsql.com/lxozqbnl` 
 var client = new Client(conString);
