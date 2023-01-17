@@ -2,7 +2,7 @@
 
 ## Description
 
-BROKEN
+NodeJS backend, PostgreSQL database, JavaScript.
 
 ## Credits
 

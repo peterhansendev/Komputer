@@ -1,6 +1,5 @@
 html,
 body {
-
   margin: 0;
   font-size: 1.1rem;
 }
@@ -215,7 +214,6 @@ button:hover {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   overflow: hidden;
-
 }
 
 #laptops-dropdown {
@@ -223,15 +221,15 @@ button:hover {
   background-color: lightskyblue;
   color: black;
   padding: 5px;
- text-align: center;
+  text-align: center;
   border: none;
   font-size: 18px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 5px;
-  width: 100%;  
+  width: 100%;
   border-right: 100px solid transparent;
-  padding-left:88px;
+  padding-left: 88px;
 }
 
 #laptops-dropdown:hover {
