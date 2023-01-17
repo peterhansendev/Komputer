@@ -39,12 +39,11 @@ function work() {
   payment.innerHTML = salary;
   document.getElementById("payment-btn").disabled = false;
 
-  fetch('https://komputer.vercel.app/api/item/computerinfo', {
+  /* fetch("https://komputer.vercel.app/api/item/computerinfo", {
     method: "GET",
-
-  } )
-  .then((response) => response.json())
-  .then((data) => console.log(data));  
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data)); */
 }
 
 function payBack() {
@@ -139,23 +138,23 @@ function buyButton() {
 //Backend communication
 
 const baseUrl = "https://komputer.vercel.app";
-let input = "okk"
+let input = "";
 
 async function getInfo() {
-  fetch('https://komputer.vercel.app/api/item/computerinfo')
+  /* fetch('https://komputer.vercel.app/api/item/computerinfo')
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => console.log(data)); */
   if (input == "") {
     return;
   }
-  
+
   const res = await fetch(baseUrl + "/api/item//computerinfo", {
     method: "GET",
-      headers: {
+    headers: {
       "Content-Type": "application/json",
     },
   });
-  console.log(res);
+
   const data = await res.json();
   input.valueOf = data.info();
 }
