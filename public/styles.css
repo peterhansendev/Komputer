@@ -12,7 +12,7 @@ body {
 #store,
 #profile {
   height: 100vh;
-  min-height: 650px;
+  min-height: 710px;
   min-width: 500px;
   width: 50vw;
 }
