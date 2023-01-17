@@ -213,13 +213,13 @@ button:hover {
   padding: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  overflow: hidden;
+  outline: 1px solid black;
 }
 
 #laptops-dropdown {
   margin-bottom: -40px;
-  background-color: lightskyblue;
-  color: black;
+  background-color: black;
+  color: orange;
   padding: 5px;
   text-align: center;
   border: none;
@@ -229,17 +229,20 @@ button:hover {
   top: 5px;
   width: 100%;
   border-right: 100px solid transparent;
-  padding-left: 88px;
+  padding-left: 95px;
 }
 
 #laptops-dropdown:hover {
   cursor: pointer;
-  background-color: rgb(107, 167, 246);
+  color: rgb(255, 211, 130);
+}
+
+#laptops-dropdown:focus {
+  outline: black;
 }
 
 #laptops-dropdown option {
-  border-radius: 50px !important;
-  background-color: white;
+  background-color: black;
 }
 
 img {
