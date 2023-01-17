@@ -17,7 +17,7 @@ function loan() {
   if (/[a-zA-Z]/g.test(amount)) {
     window.alert("Please type a number");
   } else if (amount > newAccount) {
-    window.alert("You are not permitted to borrow more than twice the amount of your balance");
+    window.alert("You are not permitted to borrow more than the amount of your balance");
   } else if (amount == "") {
     window.alert("Please type an amount");
   } else {
@@ -38,12 +38,6 @@ function work() {
   salary = parseInt(salary + 100);
   payment.innerHTML = salary;
   document.getElementById("payment-btn").disabled = false;
-
-  /* fetch("https://komputer.vercel.app/api/item/computerinfo", {
-    method: "GET",
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data)); */
 }
 
 function payBack() {
@@ -127,7 +121,7 @@ laptopsElement.addEventListener("change", handleClick);
 
 function buyButton() {
   if (laptopPrice <= newAccount) {
-    window.alert("You bought a laptop");
+    window.alert("You bought a laptop!");
     newAccount = newAccount - laptopPrice;
     displayedAmount.innerHTML = newAccount;
   } else {
@@ -141,9 +135,6 @@ const baseUrl = "https://komputer.vercel.app";
 let input = "";
 
 async function getInfo() {
-  /* fetch('https://komputer.vercel.app/api/item/computerinfo')
-  .then((response) => response.json())
-  .then((data) => console.log(data)); */
   if (input == "") {
     return;
   }
