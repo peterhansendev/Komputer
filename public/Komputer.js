@@ -78,7 +78,7 @@ function payBack() {
 const laptopsElement = document.getElementById("laptops-dropdown");
 let laptops = [];
 
-fetch("https://komputer.vercel.app/computerinfo")
+fetch("https://komputer.vercel.app/api/item/computerinfo")
   .then((response) => response.json())
   .then((data) => (laptops = data))
   .then((laptops) => addToLaptopsMenu(laptops));
@@ -136,12 +136,6 @@ function buyButton() {
   }
 }
 
-fetch('https://komputer.vercel.app/api/item/computerinfo')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-  
-
-
 //Backend communication
 
 const baseUrl = "https://komputer.vercel.app";
@@ -155,7 +149,7 @@ async function getInfo() {
     return;
   }
   
-  const res = await fetch(baseUrl + "/computerinfo", {
+  const res = await fetch(baseUrl + "/api/item//computerinfo", {
     method: "GET",
       headers: {
       "Content-Type": "application/json",
