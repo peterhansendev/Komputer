@@ -1,7 +1,7 @@
 
 
 //PostgreSQL
-
+/*
 import pkg from "pg";
 const { Client } = pkg;
 import express from "express";

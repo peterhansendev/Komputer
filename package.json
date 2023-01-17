@@ -2,7 +2,7 @@
   "name": "komputer",
   "version": "1.0.0",
   "description": "## Description",
-  "main": "public/Komputer.js",
+  "main": "public/komputer.js",
   "type": "module",
   "dependencies": {
     "dotenv": "^16.0.3",
